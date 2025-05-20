@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="uk" class="dark">
+  {% include head.html %}
+  <body class="dark:bg-gray-900 antialiased">
+    {% if jekyll.environment == 'production' %}
+
+    {% endif %}
+
+    {% include header.html %}
+
+    <main class="container text-black dark:text-white mx-auto sm:py-8 max-w-7xl mt-16 px-4 sm:px-6 lg:px-8">
+      {{ content }}
+
+
+    <div class="w-full flex flex-col justify-center items-center mb-5">
+      <div class="flex flex-col items-end justify-center mt-8">
+        {% include share-buttons.html %}
+      </div>
+    </div>
+    </main>
+  </body>
+</html>

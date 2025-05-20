@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Кожна моя прогулянка це..."
+date: 2025-05-13 14:12:10 +0200
+permalink: /posts/:title/
+description: "<p>Кожна моя прогулянка це: або 10 тис кроків, або 10 тис калорій, або -10 тис на карті</p>"
+reactions_count: 5
+reactions_sum: 3
+---
+<div class="w-full flex flex-col justify-center items-center mb-5 py-10">
+  <div class="post-content w-full max-w-2xl bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+    <div class="px-5 pt-5 pb-3">
+      <div class="flex justify-between items-center gap-2 mb-2">
+        <a target="_blank" class="mb-1 font-bold inline-block bg-clip-text text-gray-500 dark:text-gray-400" href="https://www.threads.com/@kovalyovanastasiia/post/DJj_mmJCt1C?xmt=AQGzklClReQTQLpFeMhmTtrgPJgPOk1qhn30gONoywq_pA">@kovalyovanastasiia в Threads</a>
+
+        <p class="mb-1 text-sm font-light text-gray-500 dark:text-gray-400">
+          {{ page.date | date: "%-d %B %Y" }}
+        </p>
+      </div>
+
+      <div class="content mb-3 font-normal text-gray-700 dark:text-gray-200">
+        {{ page.description }}
+      </div>
+
+      <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
+
+      <div id="reaction_e8a69220-b267-4414-a396-c035cd2eea56" class="flex items-center justify-around gap-4 text-xl">
+        <div class="relative flex items-center w-full max-w-[8rem]">
+          <div class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-s-lg p-2 h-9 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-3 focus:outline-none">
+            <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"></path>
+            </svg>
+          </div>
+
+          <div class="bg-gray-50 border-x-0 border border-gray-300 h-9 text-center text-gray-900 block w-full min-w-16 py-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white ">
+            {{ page.reactions_sum }} <sup>{{ page.reactions_count }}</sup>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-2 h-9 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-3 focus:outline-none">
+            <svg class="w-4 h-4 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

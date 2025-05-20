@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@plugin "flowbite/plugin";
+
+/* to enable dark mode, but maybe it's not needed since it's presented in the theme */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+ .flash--notice {
+  @apply border border-green-600;
+}
+
+.flash--alert {
+  @apply border border-red-800;
+}
+
+
+.btn {
+  @apply text-center rounded-lg border focus:ring-1 focus:outline-none cursor-pointer;
+}
+
+.btn-gray {
+  @apply text-white bg-gray-500 hover:bg-gray-400 border-gray-400 focus:ring-gray-400 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700;
+}
+
+.btn-black {
+  @apply text-white bg-black hover:bg-gray-900 border-gray-600 focus:ring-gray-400 dark:bg-black dark:hover:bg-gray-900 dark:focus:ring-gray-400;
+}
+
+.btn-green {
+  @apply text-green-400 bg-gray-700 hover:bg-gray-600 border-green-500 focus:ring-green-500 dark:bg-black dark:text-green-500 dark:hover:bg-gray-800;
+}
+
+.btn-red {
+  @apply text-red-400 bg-gray-700 hover:bg-gray-600 border-red-500 focus:ring-red-500 dark:bg-black dark:text-red-500 dark:hover:bg-gray-800;
+}
+
+#error_explanation {
+  @apply text-red-600 bg-gray-100 p-4 rounded-lg;
+}
+
+/* input fields */
+input, textarea {
+  @apply bg-gray-100 text-black dark:bg-gray-700 dark:text-white ring-0;
+}
+
+/* Marksmith styles */
+.ms\:markdown-preview,
+.ms\:markdown-preview h1,
+.ms\:markdown-preview h2,
+.ms\:markdown-preview h3,
+.ms\:markdown-preview h4,
+.ms\:markdown-preview h5,
+.ms\:markdown-preview h6,
+.ms\:markdown-preview p,
+.ms\:markdown-preview ul,
+.ms\:markdown-preview ol,
+.ms\:markdown-preview blockquote,
+.ms\:markdown-preview pre,
+.ms\:markdown-preview code,
+.ms\:markdown-preview table,
+.ms\:markdown-preview dl {
+  @apply bg-gray-100 text-black dark:bg-gray-700 dark:text-white;
+}
+.ms\:markdown-preview img {
+  @apply rounded-lg shadow-xl dark:shadow-gray-800 my-3;
+}
+
+.ms\:markdown-preview a,
+p a {
+  @apply text-gray-800 dark:text-white hover:text-gray-500 dark:hover:text-gray-400
+}
+
+.post-content img {
+  @apply rounded-lg shadow-xl dark:shadow-gray-800 my-3;
+}
+.ms\:items-center.ms\:text-neutral-800 {
+  @apply dark:bg-gray-500 dark:text-neutral-900;
+}
+.ms\:justify-bewteen.ms\:bg-neutral-50 {
+  @apply dark:bg-gray-500;
+}
+
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+h3 {
+  @apply text-xl font-bold;
+}
+
+h4 {
+  @apply text-lg font-bold;
+}
+
+h5 {
+  @apply text-base font-bold;
+}
+
+ul {
+  @apply list-none list-inside my-4 pl-6;
+}
+
+.content ul li::before {
+  content: "—";
+  @apply list-none inline-block mr-2;
+}
+
+ol {
+  @apply list-decimal list-inside my-4 pl-6;
+}
+
+li {
+  @apply my-2 pl-1.5;
+}
+
+.content p {
+  @apply my-4;
+}
+
+.pagy {
+  @apply inline-flex items-stretch -space-x-px my-2;
+
+  > *:first-child {
+    @apply rounded-l-lg;
+  }
+
+  > *:last-child {
+    @apply rounded-r-lg;
+  }
+}
+.pagy a:not(.gap) {
+  @apply flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600;
+
+  &:hover {
+    @apply bg-gray-100 text-gray-700 dark:bg-gray-600 dark:text-gray-300;
+  }
+
+  &:not([href]) {
+    @apply text-gray-300 bg-gray-100 cursor-default dark:bg-gray-600 dark:text-gray-300;
+  }
+
+  &.current {
+    @apply flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight border;
+  }
+}
+
+span.pagy.info {
+  @apply text-sm font-normal text-gray-500;
+}
