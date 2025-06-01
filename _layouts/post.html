@@ -8,7 +8,7 @@ layout: default
       <div class="flex justify-between items-center gap-2 mb-2">
         <a target="_blank" class="mb-1 font-bold inline-block bg-clip-text text-gray-500 dark:text-gray-400" href="https://www.threads.com/@kovalyovanastasiia/post/DJj_mmJCt1C?xmt=AQGzklClReQTQLpFeMhmTtrgPJgPOk1qhn30gONoywq_pA">@kovalyovanastasiia в Threads</a>
         <p class="mb-1 text-sm font-light text-gray-500 dark:text-gray-400">
-          {{ page.date | date: "% -d %B %Y" }}
+          {{ page.date | date: "%-d %B %Y" }}
         </p>
       </div>
       <div class="content mb-3 font-normal text-gray-700 dark:text-gray-200">
@@ -37,4 +37,19 @@ layout: default
       </div>
     </div>
   </div>
+</div>
+
+<div class="w-full flex justify-center mb-8">
+  <nav class="flex gap-4">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700">
+        &larr; Previous
+      </a>
+    {% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-700">
+        Next &rarr;
+      </a>
+    {% endif %}
+  </nav>
 </div>
